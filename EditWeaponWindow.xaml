@@ -1,0 +1,47 @@
+<Window x:Class="Assignment1.EditWeaponWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Weapon" Height="400" Width="400">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Name:"/>
+        <TextBox x:Name="NameTextBox" Grid.Row="0" Grid.Column="1" Margin="2"/>
+
+        <Label Grid.Row="1" Content="Type:"/>
+        <ComboBox x:Name="TypeComboBox" Grid.Row="1" Grid.Column="1" Margin="2"/>
+
+        <Label Grid.Row="2" Content="Rarity:"/>
+        <TextBox x:Name="RarityTextBox" Grid.Row="2" Grid.Column="1" Margin="2"/>
+
+        <Label Grid.Row="3" Content="Base Attack:"/>
+        <TextBox x:Name="BaseAttackTextBox" Grid.Row="3" Grid.Column="1" Margin="2"/>
+
+        <Label Grid.Row="4" Content="Image (URL):"/>
+        <TextBox x:Name="ImageTextBox" Grid.Row="4" Grid.Column="1" Margin="2"/>
+
+        <Label Grid.Row="5" Content="Secondary Stat:"/>
+        <TextBox x:Name="SecondaryStatTextBox" Grid.Row="5" Grid.Column="1" Margin="2"/>
+
+        <Label Grid.Row="6" Content="Passive:"/>
+        <TextBox x:Name="PassiveTextBox" Grid.Row="6" Grid.Column="1" Margin="2"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button x:Name="SaveButton" Content="Save" Width="60" Margin="5" Click="SaveButton_Click"/>
+            <Button x:Name="CancelButton" Content="Cancel" Width="60" Margin="5" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
